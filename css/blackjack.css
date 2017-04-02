@@ -1,0 +1,186 @@
+body {
+	background-image:url("../images/night.png");
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-size:cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
+section {
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+	text-align:center;
+	margin-top:40px;
+}
+
+section .cards {
+	display:inline-block;
+	position:relative;
+}
+
+section .card {
+	width:140px;
+	height:210px;
+	border-radius:10px;
+	position:relative;
+	-webkit-box-shadow: 0px 0px 9px 3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 9px 3px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 9px 3px rgba(0,0,0,0.75);
+	transform: rotateY(180deg);
+	transition: transform 0.5s ease;
+	display:none;
+}
+
+section .card .front {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:0;
+	background:#fff;
+	transition: z-index 1s ease;
+	border-radius:10px;
+}
+
+section .card .back {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:white;
+	z-index:0;
+	border-radius:10px;
+}
+
+section .flip {
+	display:inline-block;
+	transform: rotateY(0deg);
+	transition: transform 0.5s ease;
+}
+
+section .card .front div {
+	position:absolute;
+	height:35px;
+	width:35px;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:100%;
+}
+
+section .card .zindex {
+	z-index: 1;
+}
+
+section .card .front .diamonds {
+	background-image:url("../images/diamonds.png");
+}
+
+section .card .front .hearts {
+	background-image:url("../images/hearts.png");
+}
+
+section .card .front .clubs {
+	background-image:url("../images/clubs.png");
+}
+
+section .card .front .spades {
+	background-image:url("../images/spades.png");
+}
+
+section .card .front :nth-child(1) {
+	top:0;
+	left:0;
+}
+
+section .card .front :nth-child(2) {
+	bottom:0;
+	right:0;
+}
+
+section .card .front p {
+	text-align:center;
+	font: 100px/220px 'Quattrocento', serif;
+	color:#191b1a;
+}
+
+section .text {
+	font-size: 22px;
+    text-align: left;
+    color: #e2e8ef;
+    font-family: 'Sanchez', serif;
+	text-align: center;
+    margin-bottom: 20px;
+}
+
+.dealer {
+	margin-top:40px;
+}
+
+.player {
+	margin-top: 20px;
+}
+
+.buttons .button {
+    border: 2px solid #e2e8ef;
+    padding: 5px;
+    font-size: 22px;
+    font-family: 'Sanchez', serif;
+    color: #e2e8ef;
+	cursor:pointer;
+	margin:0 3px;
+	background-color:transparent;
+	-webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.stand, .hit {
+	display: inline-block;
+}
+
+.buttons .button:hover{
+	background-color:#e2e8ef;
+	color:#191b1a;
+}
+
+.message {
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+	visibility:hidden;
+	opacity:0;
+	cursor:pointer;
+	background-color:rgba(0, 0, 0, 0.95);
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.isvisible {
+	visibility:visible;
+	opacity:1;
+}
+
+.message .info {
+	position:absolute;
+	top:45%;
+	font-size:45px;
+	color:#e2e8ef;
+	text-align:center;
+	width:100%;
+	font-family: 'Sanchez', serif;
+}
+
+.buttons .new {
+	display:none;
+}
